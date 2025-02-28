@@ -32,6 +32,8 @@ body {
   font-family: "Roboto", serif;
   background-color: var(--bg-color);
   text-transform: capitalize;
+    zoom: 0.8;
+
 }
 /* Start Navbar */
 nav {
