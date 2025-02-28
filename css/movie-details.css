@@ -12,6 +12,8 @@
 body{
   font-family: "Roboto", serif;
   background-color: var(--secondry-color);
+      zoom: 0.8;
+
 
 }
 img{
