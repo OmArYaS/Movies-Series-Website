@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/main-style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <link rel="shortcut icon" href="../img/movie.png" type="image/x-icon">
+
+  </head>
+  <body>
+    <nav>
+      <div class="after-nav row align-items-center justify-content-between">
+        <div class="logo col-3 fs-1 m-2 mx-4">
+          movie<span style="color: #b23636">Flix</span>
+        </div>
+        <div id="searchResults" class="forsearch"></div>
+        <i class="fi fi-br-list col-3 fs-1 list"></i>
+        <div class="group col-8 row align-items-center justify-content-between">
+          <ul
+            class="services col-6 row list-unstyled fs-5 text-center justify-content-between align-items-stretch"
+          >
+            <li id="home_page" class="col-2 bar p-0">home</li>
+            <li id="movie_page" class="col-2 bar p-0">movie</li>
+            <li id="tv_page" class="col-3 bar p-0">series&tv</li>
+          </ul>
+          <div
+            class="helper col-6 fs- row justify-self-end justify-content-end align-items-center fs-5"
+          >
+            <input
+            id="searchInput"
+              type="text"
+              placeholder=" &#128269;search anything "
+              class="col-8 search"
+            />
+            <div class="logout p-1 col-4 justify-content-between row">
+              <span class="p-0 col-8">logout</span
+              ><i class="fi fi-br-sign-out-alt p-0 col-4"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container home-page">
+      <header>
+        <div id="slide" class="carousel slide" data-bs-ride="carousel">
+          <!-- Indicators -->
+          <div class="carousel-indicators"></div>
+
+          <!-- Slides -->
+          <div class="carousel-inner"></div>
+
+          <!-- Previous & Next Buttons -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#slide"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#slide"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </header>
+      <section class="multi-section"></section>
+    </div>
+
+    <script type="module" src="../js/logic.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
