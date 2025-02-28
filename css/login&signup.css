@@ -34,7 +34,7 @@ form{
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    width: 45vw;
+    width: 55vw;
     /* height: 50vh; */
     justify-content: center;
 }
