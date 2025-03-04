@@ -17,6 +17,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  height: 100vh;
 }
 #movie-details {
   padding-bottom: 1rem;
@@ -40,6 +41,8 @@ h1 {
   background-color: #161a1d7d;
   border-radius: 1rem;
   padding: 0.5rem;
+      zoom: 0.7;
+
   /* justify-content: space-between; */
   /* background-color: rgba(0, 0, 0, 0.236); */
 }
@@ -92,7 +95,7 @@ h1 {
 @media (min-width: 250px) and (max-width: 750px) {
   .all {
     flex-direction: column;
-    zoom: 0.9;
+    zoom: 0.7;
   }
   .desc {
     width: 100%;
