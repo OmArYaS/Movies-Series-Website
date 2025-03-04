@@ -173,6 +173,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   searchInput.addEventListener("input", async function () {
     let query = this.value.trim();
+    
 
     try {
       // 🔹 جلب الأفلام
@@ -235,14 +236,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // 🔹 إخفاء النتائج عند النقر على أي مكان خارجها
-  searchInput.addEventListener("blur", function () {
-    searchResults.style.display = "none";
+  searchInput.addEventListener("click", function () {
+      if (document.querySelector("#searchResult").style.display == "block") {
+        document.querySelector("#searchResult").style.display = "none";
+      } else {
+        watchlistResults.style.display = "block"; // إظهار القائمة
+      }
   });
 
-  // 🔹 إظهار النتائج عند التركيز على مربع البحث
-  searchInput.addEventListener("focus", function () {
-    searchResults.style.display = "block";
-  });
 });
 
 /***************************************** */

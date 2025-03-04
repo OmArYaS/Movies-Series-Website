@@ -54,7 +54,7 @@ export class BoostSection {
           }</p>
             </div>
           `;
-          console.log(movie.name ,movie.media_type||(this.apiUrl.slice(this.apiUrl.indexOf("r/") + 2 ,this.apiUrl.indexOf("r/") + 3))=="m"?"movie":"tv");
+          // console.log(movie.name ,movie.media_type||(this.apiUrl.slice(this.apiUrl.indexOf("r/") + 2 ,this.apiUrl.indexOf("r/") + 3))=="m"?"movie":"tv");
           // ✅ عند الضغط على الفيلم، يتم الانتقال لصفحة التفاصيل
           movieCard.addEventListener("click", () => {
             localStorage.setItem("selectedMovieId", movie.id);
