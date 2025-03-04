@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.1" />
+    <link rel="stylesheet" href="./css/login&signup.css" />
+    <title>تسجيل الدخول والتسجيل</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./img/movie.png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo col-3 fs-1 m-2 mx-4">
+        movie<span style="color: #b23636">Flix</span>
+      </div>
+    </nav>
+    <div class="container">
+      <form id="mix-form" action="" method="post">
+        <h1>signup</h1>
+        <label id="laname" for="name">name</label>
+        <input id="name" type="text" placeholder="e.g:Omar Yasser" />
+        <label for="email">email</label>
+        <input id="email" type="email" placeholder="e.g:mry097760@gmail.com" />
+        <label id="lapass" for="password">password</label>
+        <input id="password" type="password" placeholder="**********" />
+        <input type="submit" value="signup" />
+        <div id="login">i have an account</div>
+      </form>
+      <img src="./img/cinema.png" alt="" />
+    </div>
+
+    <script src="./js/auth.js"></script>
+  </body>
+</html>
