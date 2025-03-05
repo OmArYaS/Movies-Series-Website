@@ -38,6 +38,7 @@ body {
 nav {
   background-color: var(--secondry-color);
   color: var(--primary-color);
+  zoom: 0.9;
 }
 .logo {
   color: var();
@@ -50,6 +51,7 @@ input {
   outline: none;
   border: var(--bg-color) 0.2rem solid;
   border-radius: 2rem;
+  background-color: blanchedalmond;
 }
 .logout {
   border: #3c3d37 3px solid;
