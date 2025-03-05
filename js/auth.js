@@ -17,7 +17,7 @@ document.getElementById("login").addEventListener("click", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const mixform = document.getElementById("mix-form");
 
-  // تسجيل مستخدم جديد
+  // تسجيل مستخدم جديد مع تشفير كلمة المرور
   mixform.addEventListener("submit", function (e) {
     e.preventDefault();
     if (document.querySelector("h1").textContent == "signup") {
@@ -33,8 +33,11 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
+      // 🔒 تشفير كلمة المرور قبل التخزين
+      let encryptedPassword = btoa(password);
+
       // تخزين المستخدم الجديد
-      users.push({ name, email, password });
+      users.push({ name, email, password: encryptedPassword });
       localStorage.setItem("users", JSON.stringify(users));
 
       alert("✅ تم إنشاء الحساب بنجاح! يمكنك تسجيل الدخول الآن.");
@@ -45,9 +48,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
       let users = JSON.parse(localStorage.getItem("users")) || [];
 
-      // البحث عن المستخدم
+      // البحث عن المستخدم مع فك تشفير كلمة المرور
       let user = users.find(
-        (user) => user.email === email && user.password === password
+        (user) => user.email === email && user.password === btoa(password)
       );
 
       if (user) {
@@ -60,7 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-
 
 document.addEventListener("DOMContentLoaded", function () {
   const loggedInUser = localStorage.getItem("loggedInUser");
