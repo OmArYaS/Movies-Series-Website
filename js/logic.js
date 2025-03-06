@@ -203,6 +203,14 @@ document.addEventListener("DOMContentLoaded", () => {
   function displayResults(results) {
     searchResults.innerHTML = "";
     searchResults.style.display = "block";
+    let x =document.createElement("span");
+    x.setAttribute("id","x")
+    x.innerHTML = "❌";
+    x.addEventListener("click", function () {
+      document.querySelector("#searchResult").style.display = "none";
+    });
+    
+    searchResults.appendChild(x)
 
     if (results.length === 0) {
       searchResults.innerHTML = "<p class='no-results'>لا توجد نتائج</p>";
@@ -240,7 +248,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (document.querySelector("#searchResult").style.display == "block") {
         document.querySelector("#searchResult").style.display = "none";
       } else {
-        watchlistResults.style.display = "block"; // إظهار القائمة
+        searchResults.style.display = "block"; // إظهار القائمة
       }
   });
 
@@ -264,8 +272,23 @@ document.getElementById("watchlist").addEventListener("click", function () {
   if (watchlist.length === 0) {
     watchlistResults.innerHTML =
       "<p class='no-results'>لا توجد أفلام في القائمة</p>";
+            let x = document.createElement("span");
+            x.setAttribute("id", "x");
+            x.innerHTML = "❌";
+            x.addEventListener("click", function () {
+              document.querySelector("#searchResult").style.display = "none";
+            });
+            watchlistResults.appendChild(x);
     return;
   }
+      let x = document.createElement("span");
+      x.setAttribute("id", "x");
+      x.innerHTML = "❌";
+      x.addEventListener("click", function () {
+        document.querySelector("#searchResult").style.display = "none";
+      });
+    watchlistResults.appendChild(x);
+
 
   watchlist.forEach((movie) => {
     const movieElement = document.createElement("div");
@@ -302,3 +325,7 @@ function removeFromWatchlist(movieId) {
   document.getElementById("watchlist").click(); // تحديث العرض
 }
 
+document.querySelector("#x").addEventListener('click',function(){
+    document.querySelector("#searchResult").style.display = "none";
+  
+})
